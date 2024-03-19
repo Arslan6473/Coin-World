@@ -15,7 +15,7 @@ function Footer() {
         <div className='flex justify-center flex-col items-center gap-6 text-white'>
            <p className='cursor-pointer'>Privacy</p>
            <p className='cursor-pointer'>Term Of Use</p>
-           <p>&copy; Copyright 2024. All Rights Reserved by Arslan.</p>
+           <p>&copy; Copyright 2024. All Rights Reserved by CoinWorld.</p>
 
         </div>
     </div>

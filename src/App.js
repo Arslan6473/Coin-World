@@ -17,20 +17,18 @@ function App() {
   const [isLoding, setIsLoding] = useState(false);
 
   useEffect(() => {
-    
     (async () => {
-      setIsLoding((isLoding)=>!isLoding);
+      setIsLoding((isLoding) => !isLoding);
       try {
         const response = await axios.get(
           `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=80&page=1&sparkline=false&locale=en`
         );
         setCoins(response.data);
-        setIsLoding((isLoding)=>!isLoding);
       } catch (error) {
-        console.log(error)
+        console.log(error);
       }
+      setIsLoding((isLoding) => !isLoding);
     })();
-   
   }, []);
 
   const lastIndex = currentPage * coinPerPage;
@@ -41,7 +39,7 @@ function App() {
   return (
     <div className="App relative">
       <Navbar></Navbar>
-      <Home coins={coins} isLoding={isLoding} ></Home>
+      <Home coins={coins} isLoding={isLoding}></Home>
       <CoinsList
         coins={currentPostPage}
         totalcoins={totalcoins}

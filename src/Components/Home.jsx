@@ -11,7 +11,7 @@ function Home({ coins, isLoding }) {
   return (
     <>
       <div
-        className="bg-gradient-to-b from-[#1d0e52] to-[#000000] min-h-[110vh] "
+        className="bg-gradient-to-b from-[#1d0e52] to-[#000000] min-h-[110vh] pt-16 "
         id="section1"
       >
         <div>
